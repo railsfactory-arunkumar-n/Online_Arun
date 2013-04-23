@@ -1,0 +1,28 @@
+
+	<% if notice %>
+		<p id="notice"><%= notice %></p>
+	<% end %>
+<div class="depot_form">
+	<%= form_tag do %>
+		<fieldset>
+			<legend>Please Log In</legend>
+			<div>
+				<label for="name">Name:</label>
+				<%= text_field_tag :name%>
+				</div>
+			<div>
+				<label for="password">Password:</label>
+				<%= password_field_tag :password%>
+				
+			</div>
+			
+			<div>
+				<%= submit_tag "Login" %>
+				<%=link_to "register",{:controller=>'users',:action=>'new'}%>
+				<%#=link_to 'forgot passworld'  ,{:controller=>'users', :action=>'forgot_password'}%>
+				<%#=link_to 'reset passworld' , reset_password_users_path, :method => 'post' %>
+				<%=link_to 'forgot passworld' , forgot_password_users_path%>
+			</div>
+		</fieldset>
+	<% end %>
+</div>

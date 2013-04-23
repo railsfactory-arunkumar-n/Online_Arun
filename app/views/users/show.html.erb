@@ -1,0 +1,26 @@
+<% if notice %>
+		<p id="notice"><%= notice %></p>
+	<% end %>
+<p>
+   <table>
+      <tr>
+        <th>name</th><th></th>
+        <th>email_id</th>
+ 
+      </tr>
+      <tr>
+        <td>
+          <%= @user.name %>
+        </td><td></td>
+        <td>
+          <%=@user.email_id%>
+        </td>
+       </tr>
+    </table>
+</p>
+  
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> 
+<%#= link_to 'Back', users_path %>
+<%= link_to 'Back', store_index_path %>

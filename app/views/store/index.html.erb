@@ -1,0 +1,36 @@
+
+
+	<% if notice %>
+		<p id="notice"><%= notice %></p>
+	<% end %>
+	<h3>product list with price </h3>
+	<table>
+		<tr>
+		<th>name </th>
+		<th></th>
+		<th>price</th>
+		</tr>
+		</table>
+	<% @products.each do |product| %>
+		<div class="entry">
+		<table>
+		<tr>
+		<td> <h5><%= product.name %></h5> </td>
+		<td></td>
+		 <td><h5><%= product.price %></h5></td>
+		 <td></td>
+		 <td></td>
+		 <td><%#product=product.id%>
+		  <%= button_to 'Add to Cart', line_item1s_path(:product_id => product) %>
+
+		 <%#=link_to 'ADD' , line_item1s_path(:product_id => product)%>
+		 
+		 
+		 </td>
+		 </tr>
+		 </table>
+			<div class="price_line">
+				<span class="price"></span>
+			</div>
+		</div>
+	<% end %>

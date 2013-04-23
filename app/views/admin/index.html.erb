@@ -1,0 +1,24 @@
+
+<p>Find me in app/views/admin/index.html.erb</p>
+<h5>Welcome</h5>
+It's <%= Time.now %>
+<%#= link_to 'New Product', new_product_path %>
+<%#= link_to "user record" ,users_path%>
+<table>
+		<tr>
+			<th>name </th>
+			<th>emial_id</th>
+		</tr>
+		 
+		
+		 
+			<tr>
+				<td>
+								<%= @user.name%>
+				</td>
+				<td><%=@user.email_id%></td>
+			</tr>
+		
+		
+</table>
+<%= link_to "back" ,store_path%>

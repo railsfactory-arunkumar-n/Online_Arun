@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App7</title>
+   
+  <%= stylesheet_link_tag    "my", :media => "all" %>
+  <%= javascript_include_tag "application"%>
+  <%= csrf_meta_tags %>
+</head>
+<body id = "store">
+    <div id="banner">
+            SZ
+		(Shopping Zone)
+		</div>
+		<div id="columns">
+				<div id="side">
+					  <%if(session[:user_id]) %>
+							<h5></h5>
+							<%= link_to 'Logout', logout_path, :method => :delete %>
+							<%=link_to 'profile' ,  user_path(session[:user_id])  %>
+							<%else%>
+							
+						 <h5></h5>
+						 <%= link_to "login", { :controller => "sessions", :action => "new" }%>
+						 
+						
+					   <%end%>
+				</div>
+		</div>
+		<div id="main">
+				<%= yield %>
+		</div> 
+		
+</body>
+</html>
