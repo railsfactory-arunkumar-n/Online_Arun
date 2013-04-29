@@ -19,9 +19,11 @@
 			<div>
 				<%= submit_tag "Login" %>
 				<%=link_to "register",{:controller=>'users',:action=>'new'}%>
+				<a href="/auth/facebook">Login Via facebook</a>
 				<%#=link_to 'forgot passworld'  ,{:controller=>'users', :action=>'forgot_password'}%>
 				<%#=link_to 'reset passworld' , reset_password_users_path, :method => 'post' %>
-				<%=link_to 'forgot passworld' , forgot_password_users_path%>
+				<%#=link_to 'forgot passworld' , forgot_password_users_path%>
+				<%#=link_to 'facebook loggin' ,users_forgot_password_path%>
 			</div>
 		</fieldset>
 	<% end %>

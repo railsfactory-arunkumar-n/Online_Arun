@@ -8,7 +8,10 @@ gem 'rails', '3.2.13'
 gem 'mysql2'
 gem 'therubyracer'
 gem 'json'
-
+gem 'omniauth-facebook'
+#gem 'activemerchant'
+gem 'authorize-net'
+#gem 'activemerchant', :require => 'active_merchant'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -16,8 +19,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-
+   gem 'therubyracer', :platforms => :ruby
+    gem 'execjs'
   gem 'uglifier', '>= 1.0.3'
 end
 

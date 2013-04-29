@@ -1,4 +1,12 @@
 App7::Application.routes.draw do
+  match '/payments/payment/:id', :to => 'payments#payment', :as => 'paymentspayment', :via => [:get]
+
+  match '/payments/thank_you', :to => 'payments#thank_you', :as => 'payments_thank_you', :via => [:get]
+
+  #match '/5_w5cj663_hpqgs/payment', :to => '5_w5cj663_hpqg#payment', :as => '5_w5cj663_hpqgpayment', :via => [:get]
+
+  #match '/5_w5cj663_hpqgs/thank_you', :to => '5_w5cj663_hpqg#thank_you', :as => '5_w5cj663_hpqg_thank_you', :via => [:get]
+
   resources :orders
 
 
@@ -34,6 +42,7 @@ App7::Application.routes.draw do
 end
   controller :users do
     get 'forgot_password' => :forgot_password
+    match '/auth/:provider/callback'=>'sessions#facebook_login'
  
   end
   
@@ -48,7 +57,7 @@ end
   # first created -> highest priority.
 
   # Sample of regular route:
-   match 'users/forgot_password' => 'users#forgot_password'
+   #get 'users/forgot_password' => 'sessions#forgot_password'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -100,4 +109,5 @@ end
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+
 end

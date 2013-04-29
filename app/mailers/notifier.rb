@@ -29,17 +29,17 @@ class Notifier < ActionMailer::Base
     ActionMailer::Base.mail(:from => "arunkumarit02@gmial.com", :to => "arun.n@railsfactory.org", :subject => "Adding new product", :body => "the product #{name} is added into the list").deliver
   end
   def forgot_password(email_id,code)
-    p 111111111111111111111111111111111111111111111111111111111111
+    
     p code
     p @emal = email_id
     p email_id
     
-    p 111111111111111111111111111111111111111111111111111111111111
+   
      ActionMailer::Base.mail(:from => "arunkumarit02@gmial.com", :to => email_id, :subject => "token code", :body => "please enter the code in the reset password text. the code is #{code}").deliver
    end
-   def order
-     p 00000000000000000000000000000000000
-       ActionMailer::Base.mail(:from => "arunkumarit02@gmial.com", :to => "arun.n@railsfactory.org", :subject => "Adding new product", :body => "the product {name} is added into the list")
+   def order(email)
+    
+       ActionMailer::Base.mail(:from => "arunkumarit02@gmial.com", :to => email, :subject => "payment for your product ", :body => "the payment for you purchase is sucessfully done ").deliver
        
     end
 end

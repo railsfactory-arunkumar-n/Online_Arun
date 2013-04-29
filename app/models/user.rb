@@ -31,5 +31,26 @@ class User < ActiveRecord::Base
     end
     def generate_salt
       self.salt = self.object_id.to_s + rand.to_s
-      end
+    end
+    #sting =>stores the provoider name
+     # role =>stores the uid number
+    def self.create_with_omniauth(auth)  
+      
+          create! do |user|  
+     
+          user.string = auth["provider"] 
+     
+          user.role= auth["uid"]  
+     
+          user.name =auth["info"][ "name"]
+     
+          user.password="123"
+          
+          user.email_id=auth["info"]["email"]
+      #user.name = auth["user_info"]["name"] 
+     
+      
+        end  
+  end  
+
 end

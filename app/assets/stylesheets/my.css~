@@ -14,7 +14,7 @@
 }
 #columns
 {
-	
+  background: #efe;	
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
@@ -44,4 +44,48 @@ body {
  
   background-position: 50% 50%;
   background-repeat: no-repeat;
+}
+
+#store .cart_title {
+font: 120% bold;
+}
+#store .item_price, #store .total_line {
+text-align: right;
+}
+#store .total_line .total_cell {
+font-weight: bold;
+border-top: 1px solid #595;
+}
+.depot_form fieldset {
+background: #efe;
+}
+.depot_form legend {
+color: #dfd;
+background: #141;
+font-family: sans-serif;
+padding: 0.2em 1em;
+}
+.depot_form label {
+width: 5em;
+float: left;
+text-align: right;
+padding-top: 0.2em;
+margin-right: 0.1em;
+display: block;
+}
+.depot_form select, .depot_form textarea, .depot_form input {
+margin-left: 0.5em;
+}
+.depot_form .submit {
+margin-left: 4em;
+}
+.depot_form div {
+margin: 0.5em 0;
+}
+#main_container{
+width:1000px;
+height:auto;
+margin:auto;
+padding:0px;
+background-color:#FFFFFF;
 }
