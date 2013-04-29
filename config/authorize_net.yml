@@ -1,0 +1,8 @@
+default:
+  api_login_id: 5W5cj663HPQG
+  api_transaction_key: 88Y3Txt2A27pRe4U
+  merchant_hash_value: 5W5cj663HPQG
+
+development: 
+test: 
+production: 

@@ -1,0 +1,8 @@
+<%= form_for :sim_transaction, :url => AuthorizeNet::SIM::Transaction::Gateway::TEST do |f| %>
+  <%= sim_fields(@sim_transaction) %>
+   
+  <%= label_tag 'x_amount', "your products total cost is   #{number_to_currency(@amount)}. " %>
+  <br />
+  <p > please click the ok button for online payment for those items </p>
+  <%= f.submit 'OK'%>
+<% end %>
