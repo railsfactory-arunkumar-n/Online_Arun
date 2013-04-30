@@ -1,13 +1,16 @@
-
-
-	<% if notice %>
+	 <% if notice %>
 		<p id="notice"><%= notice %></p>
 	<% end %>
-	<%if( session[:user_name] =='admin')%>
-			<h2>hi <%=session[:user_name]%></h2>
-	<%else%>
-			<h2>hi <%=session[:user_name]%></h2>
-	 <%end%>
+	 <%if(session[:user_name])%>
+			 <%if( session[:user_name] =='admin')%>
+					<h2>hi <%=session[:user_name]%></h2>
+			<%else%>
+					<h2>hi <%=session[:user_name]%></h2>
+			 <%end%>
+		<%end%>
+	 
+	
+	
 	<h3>product list with price </h3>
 	<table>
 		<tr>

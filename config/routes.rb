@@ -1,6 +1,6 @@
 App7::Application.routes.draw do
-  match '/payments/payment/:id', :to => 'payments#payment', :as => 'paymentspayment', :via => [:get]
-
+  #match '/payments/payment/:id', :to => 'payments#payment', :as => 'paymentspayment', :via => [:get]
+  match '/payments/payment/:id' => 'payments#payment', :as =>'payments' ,:via => :get
   match '/payments/thank_you', :to => 'payments#thank_you', :as => 'payments_thank_you', :via => [:get]
 
   #match '/5_w5cj663_hpqgs/payment', :to => '5_w5cj663_hpqg#payment', :as => '5_w5cj663_hpqgpayment', :via => [:get]

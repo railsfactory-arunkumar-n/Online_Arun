@@ -58,6 +58,7 @@ border-top: 1px solid #595;
 }
 .depot_form fieldset {
 background: #efe;
+float: right;
 }
 .depot_form legend {
 color: #dfd;
